@@ -1,23 +1,9 @@
-// Object
-const player = {
-    name: "Jeck",
-    points: 10,
-    fat: true,
+// prompt는 옛날 문법
+const age = prompt("How old are you?");
 
-    sayHello: function(name) {
-        console.log("Hello! " + name);
-    }
-};
+// 변수의 타입 get
+// prompt 입력값은 기본적으로 string
+ console.log(typeof age, " ", age);
 
-console.log(player);
-console.log(player.name);
-
-// 상수로 선언한 객제 내 변수는 변경 가능
-player.points = 20;
-console.log(player);
-
-// 코드 상에서 객체의 프로퍼티 추가 가능
-player.lastName = "Family"
-console.log(player);
-
-player.sayHello("Test Name");
+ // parseInt(숫자가 아닌 값) -> NaN(Not a Number)
+console.log(typeof parseInt(age), " ", parseInt(age));
