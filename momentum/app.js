@@ -3,6 +3,10 @@ const player = {
     name: "Jeck",
     points: 10,
     fat: true,
+
+    sayHello: function(name) {
+        console.log("Hello! " + name);
+    }
 };
 
 console.log(player);
@@ -15,3 +19,5 @@ console.log(player);
 // 코드 상에서 객체의 프로퍼티 추가 가능
 player.lastName = "Family"
 console.log(player);
+
+player.sayHello("Test Name");
