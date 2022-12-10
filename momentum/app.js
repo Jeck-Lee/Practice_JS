@@ -1,9 +1,15 @@
-// prompt는 옛날 문법
-const age = prompt("How old are you?");
+/**
+ * document: 작성한 HTML을 가리키는 객체
+ * -> 이를 통해 JavaScript에서 HTML read/write 가능
+ */
+/**
+ * document.getElementById([String])
+ * -> 해당 id를 가진 태그를 가져올 수 있음
+ */
+const title = document.getElementById("title");
 
-// 변수의 타입 get
-// prompt 입력값은 기본적으로 string
- console.log(typeof age, " ", age);
+// element를 더 자세하게 보여줌
+console.dir(title);
 
- // parseInt(숫자가 아닌 값) -> NaN(Not a Number)
-console.log(typeof parseInt(age), " ", parseInt(age));
+title.innerText = "Got you"
+console.dir(title);
