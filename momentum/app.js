@@ -5,4 +5,6 @@ function handleTitleClick() {
     title.style.color = "blue";
 }
 
+// title.onclick = handleTitleClick; 와 동일
+// addEventListener를 사용할 경우, removeEventListener로 삭제도 가능
 title.addEventListener("click", handleTitleClick);
