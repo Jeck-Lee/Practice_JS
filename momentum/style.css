@@ -13,3 +13,6 @@ active라는 이름의 class
 .active {
     color: tomato;
 }
+.appFont {
+    font-size: small;
+}

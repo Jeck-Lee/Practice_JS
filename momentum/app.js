@@ -1,14 +1,19 @@
 const h1 = document.querySelector("div.hello:first-child h1");
 
 function handleTitleClick() {
+    /**
+     * 
     const activeClass = "active"
-    if (h1.className === activeClass) {
-        h1.className = "";
+    if (h1.classList.contains(activeClass)) {
+        h1.classList.remove(activeClass);
     }
     else {
-        // CSS 파일에서 선언한 클래스 이름과 같아야 함
-        h1.className = activeClass;
+        h1.classList.add(activeClass);
     }
+
+    위 코드를 아래처럼 간략화할 수 있음
+     */
+    h1.classList.toggle("active");
 }
 
 // title.onclick = handleTitleClick; 와 동일
