@@ -11,14 +11,25 @@ function onLoginSubmit(event) {
     event.preventDefault();
     const username = loginInput.value;
     loginForm.classList.add(HIDDEN_CLASSNAME);
-    // greeting.innerText = "Hello, " + username;
-    // warning: single or double quatation 아님
-    greeting.innerText = `Hello, ${username}`;
-    greeting.classList.remove(HIDDEN_CLASSNAME);
 
+    paintGreetings(username);
     localStorage.setItem(USERNAME_KEY, username);
 }
 
 
-// enter를 누르거나 submit 클릭 시 발생
-loginForm.addEventListener("submit", onLoginSubmit);
+function paintGreetings(username) {
+    // greeting.innerText = "Hello, " + username;
+    // warning: single or double quatation 아님
+    greeting.innerText = `Hello, ${username}`;
+    greeting.classList.remove(HIDDEN_CLASSNAME);
+}
+
+const savedUsername = localStorage.getItem(USERNAME_KEY);
+if (savedUsername === null) {
+    loginForm.classList.remove(HIDDEN_CLASSNAME);
+    // enter를 누르거나 submit 클릭 시 발생
+    loginForm.addEventListener("submit", onLoginSubmit);
+}
+else {
+    paintGreetings(savedUsername);
+}
