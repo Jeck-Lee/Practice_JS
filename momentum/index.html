@@ -8,8 +8,14 @@
     <title>Momentum</title>
 </head>
 <body>
-    <div id="login-form">
-        <input type="text" placeholder="What is your name?" />
+    <!-- input의 유효성 검사를 위해 form 사용 -->
+    <form id="login-form">
+        <input required maxlength="15" type="text" placeholder="What is your name?" />
+        <!--
+            form-input에 있는 button / type이 submit인 input을 누르면 submit이 되어 페이지가 새로고침 됨
+            -> javascript의 event listener를 사용하지 않아도 됨
+        -->
+        <!-- <input type="submit" value="Login" /> -->
         <button>Login</button>
     </div>
     <script src="app.js"></script>

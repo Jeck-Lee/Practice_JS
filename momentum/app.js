@@ -4,15 +4,6 @@ const loginButton = loginForm.querySelector("button");
 
 
 function onLoginBtnClick(){
-   const username = loginInput.value;
-    if (username === "") {
-        alert("Please write your name!");
-    }
-    else if (username.length > 15) {
-        alert("your name is too long");
-    }
-    else {
-        alert("Hello " + username);
-    }
+    alert("Hello " + username);
 }
 loginButton.addEventListener("click",onLoginBtnClick);
