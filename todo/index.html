@@ -3,9 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/weathercard.css" />
     <title>To-Do</title>
   </head>
   <body>
+    <article class="widget">
+      <div class="weatherIcon"></div>
+      <div class="weatherInfo">
+        <div class="temperature"></div>
+        <div class="description">
+          <div class="weatherCondition"></div>
+          <div class="place">Where you are...</div>
+        </div>
+      </div>
+    </article>
+
+    <script src="_key.js"></script>
     <script src="js/background.js"></script>
+    <script src="js/weather.js"></script>
   </body>
 </html>
