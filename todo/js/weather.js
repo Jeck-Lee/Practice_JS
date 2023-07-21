@@ -19,7 +19,6 @@ function onGeoOk(position) {
 
       const iconImage = document.createElement("img");
       iconImage.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-      //   iconImage.style.height = "100%";
       icon.appendChild(iconImage);
     });
 }
