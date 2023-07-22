@@ -1,0 +1,41 @@
+.box {
+  /* 수평 중앙 정렬하기 */
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 400px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  cursor: pointer;
+  background: #ffffffb7;
+  color: #080705;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 17px 35px 0 rgba(0, 0, 0, 0.3), 0 7px 7px 0 rgba(0, 0, 0, 0.15);
+  vertical-align: middle;
+}
+
+ul.todo-list {
+  flex-direction: column;
+}
+
+.todo-list li {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 5px;
+}
+
+.todo-list li div {
+  flex: 1;
+  font-size: 18px;
+}
+
+.todo-list li button {
+  flex: 0;
+  color: #7881a1;
+  vertical-align: middle;
+  padding-left: 20px;
+}
