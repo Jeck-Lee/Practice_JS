@@ -1,31 +1,41 @@
 const loginForm = document.getElementById("login-form");
 const loginInput = loginForm.querySelector("input");
 const greeting = document.querySelector("#greeting");
+const toDoForm = document.getElementById("todo-form");
+const toDoList = document.getElementById("todo-list");
 
 const HIDDEN_CLASSNAME = "hidden";
 const NONE_DISPLAY = "none";
+const FLEX_DISPLAY = "flex";
 const USERNAME_KEY = "username";
 
 function onLoginSubmit(event) {
   event.preventDefault();
   const username = loginInput.value;
-  loginForm.style.display = NONE_DISPLAY;
-
+  paintToDoAndHideLogin();
   paintGreetings(username);
   localStorage.setItem(USERNAME_KEY, username);
 }
 
 function paintGreetings(username) {
   greeting.innerText = `Hello, ${username}`;
-  greeting.classList.remove(HIDDEN_CLASSNAME);
+}
+function paintLoginAndHideToDo() {
+  loginForm.style.display = FLEX_DISPLAY;
+  toDoForm.style.display = NONE_DISPLAY;
+  toDoList.style.display = NONE_DISPLAY;
+}
+function paintToDoAndHideLogin() {
+  loginForm.style.display = NONE_DISPLAY;
+  toDoForm.style.display = FLEX_DISPLAY;
+  toDoList.style.display = FLEX_DISPLAY;
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 if (savedUsername === null) {
-  loginForm.style.display = "flex";
-  // enter를 누르거나 submit 클릭 시 발생
+  paintLoginAndHideToDo();
   loginForm.addEventListener("submit", onLoginSubmit);
 } else {
-  loginForm.style.display = NONE_DISPLAY;
   paintGreetings(savedUsername);
+  paintToDoAndHideLogin();
 }

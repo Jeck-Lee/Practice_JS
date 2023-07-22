@@ -26,6 +26,7 @@
     </div>
 
     <div style="margin-top: 50px">
+      <h1 id="greeting" style="text-align: center">Hello,</h1>
       <form id="login-form" class="webflow-style-input">
         <input
           required
@@ -35,7 +36,18 @@
         />
         <button type="submit">></button>
       </form>
-      <h1 id="greeting" class="demo hidden"></h1>
+      <form id="todo-form" class="webflow-style-input">
+        <input
+          type="text"
+          placeholder="Write a To Do and Press Enter"
+          required
+        />
+        <button type="submit">+</button>
+      </form>
+    </div>
+
+    <div style="margin-top: 30px">
+      <ul id="todo-list"></ul>
     </div>
 
     <script src="_key.js"></script>
@@ -43,5 +55,6 @@
     <script src="js/clock.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/login.js"></script>
+    <script src="js/todo.js"></script>
   </body>
 </html>
