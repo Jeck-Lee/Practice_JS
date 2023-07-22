@@ -9,7 +9,7 @@ function onGeoOk(position) {
     .then((response) => response.json())
     .then((data) => {
       const temp = document.querySelector(".temperature");
-      const weather = document.querySelector(".weatherCondition");
+      const weather = document.querySelector(".weatherText");
       const place = document.querySelector(".place");
       const icon = document.querySelector(".weatherIcon");
 

@@ -3,21 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/weathercard.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>To-Do</title>
   </head>
   <body>
-    <h2 id="clock">00:00</h2>
-    <article class="widget">
-      <div class="weatherIcon"></div>
+    <div class="widget">
       <div class="weatherInfo">
         <div class="temperature"></div>
-        <div class="description">
-          <div class="weatherCondition"></div>
-          <div class="place">Where you are...</div>
+        <div class="weatherCondition">
+          <div class="description">
+            <div class="weatherText"></div>
+            <div class="place">Where you are...</div>
+          </div>
+          <div class="weatherIcon"></div>
         </div>
       </div>
-    </article>
+      <div class="clockDate">
+        <div class="clock">00:00</div>
+        <div class="date"></div>
+      </div>
+    </div>
 
     <script src="_key.js"></script>
     <script src="js/background.js"></script>
